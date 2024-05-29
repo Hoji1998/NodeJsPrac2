@@ -8,7 +8,7 @@ export default async function (req, res, next) {
   try {
     const { accessToken } = req.cookies;
     if (!accessToken) {
-      return res.status(404).json({ message: 'Access Token이 없습니다' });
+      return res.status(403).json({ message: 'Access Token이 없습니다' });
     }
 
     const [tokenType, token] = accessToken.split(' ');
