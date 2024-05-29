@@ -1,5 +1,3 @@
-// src/middlewares/error-handling.middleware.js
-
 export default function (err, req, res, next) {
   // 에러를 출력합니다.
   console.error(err);
